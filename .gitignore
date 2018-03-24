@@ -287,4 +287,8 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
-www/**
+www/
+.sourcemaps/
+src/GoogleService-Info.plist
+src/firebaseInit.ts
+src/google-services.json
