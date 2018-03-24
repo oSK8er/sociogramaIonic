@@ -15,12 +15,10 @@ import { IonicPage, NavController } from 'ionic-angular';
 export class WelcomePage {
 
   constructor(public navCtrl: NavController) { }
-
-  login() {
-    this.navCtrl.push('LoginPage');
+  teacher() {
+    this.navCtrl.push('LoginPage');  //pushear a página de profe  //TODO
   }
-
-  signup() {
-    this.navCtrl.push('SignupPage');
+  student() {
+    this.navCtrl.push('SignupPage'); //pushear a página de alumnos //TODO
   }
 }
