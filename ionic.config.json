@@ -1,6 +1,6 @@
 {
   "name": "sociograma",
-  "app_id": "",
+  "app_id": "com.oSK8er.sociograma",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
