@@ -49,5 +49,9 @@
 
   "BACK_BUTTON_TEXT": "Atras",
 
-  "SEARCH_TITLE": "Buscar"
+  "SEARCH_TITLE": "Buscar",
+
+  "TEACHER":"Soy profesor",
+  "STUDENT":"Soy alumno",
+  "WELCOME_INTRO":"Bienvenid@s a la App Sociograma"
 }
