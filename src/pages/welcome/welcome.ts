@@ -16,7 +16,7 @@ export class WelcomePage {
 
   constructor(public navCtrl: NavController) { }
   teacher() {
-    this.navCtrl.push('LoginPage');  //pushear a página de profe  //TODO
+    this.navCtrl.push('TeacherPage');  //pushear a página de profe  //TODO
   }
   student() {
     this.navCtrl.push('SignupPage'); //pushear a página de alumnos //TODO

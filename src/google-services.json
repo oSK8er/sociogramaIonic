@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "410945697982",
+    "firebase_url": "https://sociograma-escolar.firebaseio.com",
+    "project_id": "sociograma-escolar",
+    "storage_bucket": "sociograma-escolar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410945697982:android:5dccd2ec87b5c1fe",
+        "android_client_info": {
+          "package_name": "com.oSK8er.sociograma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410945697982-ucnqgnn29fo0702ebh0kquf0vk8ugaud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLH9ABSlPZBcMrAdzJeDS-pgPBCMu9Rt8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

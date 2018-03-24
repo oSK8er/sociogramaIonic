@@ -1,15 +1,15 @@
 webpackJsonp([2],{
 
-/***/ 340:
+/***/ 341:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TeacherPageModule", function() { return TeacherPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(118);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__teacher__ = __webpack_require__(355);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,39 +20,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TabsPageModule = /** @class */ (function () {
-    function TabsPageModule() {
+var TeacherPageModule = /** @class */ (function () {
+    function TeacherPageModule() {
     }
-    TabsPageModule = __decorate([
+    TeacherPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_3__teacher__["a" /* TeacherPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__tabs__["a" /* TabsPage */]),
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__teacher__["a" /* TeacherPage */]),
                 __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_3__tabs__["a" /* TabsPage */]
+                __WEBPACK_IMPORTED_MODULE_3__teacher__["a" /* TeacherPage */]
             ]
         })
-    ], TabsPageModule);
-    return TabsPageModule;
+    ], TeacherPageModule);
+    return TeacherPageModule;
 }());
 
-//# sourceMappingURL=tabs.module.js.map
+//# sourceMappingURL=teacher.module.js.map
 
 /***/ }),
 
-/***/ 353:
+/***/ 355:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TeacherPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(117);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -64,37 +62,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-
-
-var TabsPage = /** @class */ (function () {
-    function TabsPage(navCtrl, translateService) {
-        var _this = this;
+var TeacherPage = /** @class */ (function () {
+    function TeacherPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.translateService = translateService;
-        this.tab1Root = __WEBPACK_IMPORTED_MODULE_3__pages__["c" /* Tab1Root */];
-        this.tab2Root = __WEBPACK_IMPORTED_MODULE_3__pages__["d" /* Tab2Root */];
-        this.tab3Root = __WEBPACK_IMPORTED_MODULE_3__pages__["e" /* Tab3Root */];
-        this.tab1Title = " ";
-        this.tab2Title = " ";
-        this.tab3Title = " ";
-        translateService.get(['TAB1_TITLE', 'TAB2_TITLE', 'TAB3_TITLE']).subscribe(function (values) {
-            _this.tab1Title = values['TAB1_TITLE'];
-            _this.tab2Title = values['TAB2_TITLE'];
-            _this.tab3Title = values['TAB3_TITLE'];
-        });
     }
-    TabsPage = __decorate([
+    TeacherPage.prototype.startApp = function () {
+        this.navCtrl.setRoot('WelcomePage', {}, {
+            animate: true,
+            direction: 'forward'
+        });
+    };
+    TeacherPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\oSK8er\Documents\Oscar\proyecto\sociogramaIonic\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" [tabTitle]="tab1Title" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" [tabTitle]="tab2Title" tabIcon="search"></ion-tab>\n\n  <ion-tab [root]="tab3Root" [tabTitle]="tab3Title" tabIcon="cog"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"C:\Users\oSK8er\Documents\Oscar\proyecto\sociogramaIonic\src\pages\tabs\tabs.html"*/
+            selector: 'page-teacher',template:/*ion-inline-start:"C:\Users\oSK8er\Documents\Oscar\proyecto\sociogramaIonic\src\pages\teacher\teacher.html"*/'<ion-header>\n\n\n\n    <ion-navbar>\n\n        <ion-title>{{ \'TEACHER_TITLE\' | translate }}</ion-title>\n\n    </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content>\n\n\n\n    <ion-card>\n\n\n\n        <ion-item>\n\n            <ion-avatar item-start>\n\n                <img src="assets/img/marty-avatar.png">\n\n            </ion-avatar>\n\n\n\n\n\n            <h2>Profesor anónimo</h2>\n\n            <p>25 de marzo de 2018</p>\n\n        </ion-item>\n\n\n\n        <img src="../assets/img/splashbg.png" padding>\n\n\n\n        <ion-card-content>\n\n            <p>Este es el código que tienes que compartir con tus alumnos:</p>\n\n        </ion-card-content>\n\n\n\n        <ion-item padding>\n\n            <ion-label text-center>CÓDIGO A COMPARTIR</ion-label>\n\n        </ion-item>\n\n\n\n        <ion-row padding>\n\n            <button ion-button block (click)="startApp()">{{ \'CONTINUE\' | translate }}</button>\n\n        </ion-row>\n\n\n\n    </ion-card>\n\n\n\n\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\oSK8er\Documents\Oscar\proyecto\sociogramaIonic\src\pages\teacher\teacher.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */]])
-    ], TabsPage);
-    return TabsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
+    ], TeacherPage);
+    return TeacherPage;
 }());
 
-//# sourceMappingURL=tabs.js.map
+//# sourceMappingURL=teacher.js.map
 
 /***/ })
 

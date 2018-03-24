@@ -53,5 +53,6 @@
 
   "TEACHER":"Soy profesor",
   "STUDENT":"Soy alumno",
-  "WELCOME_INTRO":"Bienvenid@s a la App Sociograma"
+  "WELCOME_INTRO":"Bienvenid@s a la App Sociograma",
+  "TEACHER_TITLE":"Profesor"
 }
