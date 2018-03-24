@@ -7,6 +7,9 @@ import { Config, Nav, Platform } from 'ionic-angular';
 import { FirstRunPage } from '../pages/pages';
 import { Settings } from '../providers/providers';
 
+import firebase from 'firebase';
+import * as fc from '../firebaseInit';
+
 @Component({
   template: `<ion-menu [content]="content">
     <ion-header>
@@ -42,7 +45,8 @@ export class MyApp {
     { title: 'Master Detail', component: 'ListMasterPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },
-    { title: 'Search', component: 'SearchPage' }
+    { title: 'Search', component: 'SearchPage' },
+    { title: 'Teacher', component: 'TeacherPage' }
   ]
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
@@ -51,13 +55,17 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      firebase.initializeApp(fc.firebaseConfig);
+      var db =firebase.database();
+      var displayDate = new Date().toLocaleDateString();
+      db.ref('lastaccess/').set(displayDate);
     });
     this.initTranslate();
   }
 
   initTranslate() {
     // Set the default language for translation strings, and the current language.
-    this.translate.setDefaultLang('en');
+    this.translate.setDefaultLang('es');
     const browserLang = this.translate.getBrowserLang();
 
     if (browserLang) {
@@ -73,7 +81,7 @@ export class MyApp {
         this.translate.use(this.translate.getBrowserLang());
       }
     } else {
-      this.translate.use('en'); // Set your language here
+      this.translate.use('es'); // Set your language here
     }
 
     this.translate.get(['BACK_BUTTON_TEXT']).subscribe(values => {
